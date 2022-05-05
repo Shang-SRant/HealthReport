@@ -3,14 +3,13 @@
 import requests as rq
 from bs4 import BeautifulSoup
 
-
-def postHealthReport(name, zhenshu):
+def postHealthReport(name):
     url = 'http://old.peihua.cn/stuyqcj/index.aspx?name=' + name  # 需要请求的URL地址
 
     data = {'__EVENTTARGET': '',
              '__EVENTARGUMENT': '',
-             '__VIEWSTATE': '/wEPDwULLTE3ODE2MTI0ODlkGAEFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYgBQJBMQUCQTEFAkEyBQJBMgUCQjEFAkIxBQJCMgUCQjIFAkIzBQJCMwUCQjQFAkI0BQJDMQUCQzEFAkMyBQJDMgUCRDEFAkQxBQJEMgUCRDIFAkUxBQJFMQUCRTIFAkUyBQJFMwUCRTMFAkU0BQJFNAUCRjEFAkYyBQJGMwUCRjQloBKkQUjJyEQXV7bz2cZV67XSweGjK+vQdnjG6VaJug==',
-             '__EVENTVALIDATION': '/wEdABbqp31eMH/8aK/n2m23NorDrVyLxNzBgt1KJuQZ6iZJZHvbOVd7jD77vUTJ9vAbDccHENsdLPywzIncI1Bqene+lBw9tIsm88xZb2QeaC7+SxHn/Prl20L4a14KDWdLx/iTm9Z5ttIPd2nzuFjHGlpc7H91ulAMzy+qTw/3CR3CMxwIf63KIiev64jSqu2KV7//IRAEvRp5DRfCC6l7RvM2qtE9uJ+IjV8PhScfY1MX/1hHHbi8+CORGaf7Il3zAoCWVJwQeCzMvfvbSKmFiRyBmmdqzL/YNIzFlXqGANynIP4KDOAORxNv6rPYjm8CFB+29oj+CDKDZCNEkBlqP9GkoV31TLr0MMIuCwCfUOIcaU6ay02gNvI9ts7bnpKhMxFJs4ZOHx+10u9fvUIXsKGdcB2Wva0r3aLNy2az2rzBdgSZ4+KsAgqDt1MJc9qdjo/N+DvxnwFeFeJ9MIBWR693rL5j3AQJGEm1JdxrJlVuo6bhz1vC05BxRi8fjoNR6wk=',
+             '__VIEWSTATE': '/wEPDwUKMTg1OTg4OTU1MWQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFhgFAkExBQJBMQUCQTIFAkEyBQJCMQUCQjEFAkIyBQJCMgUCQzEFAkMxBQJDMgUCQzIFAkMzBQJDMwUCRDEFAkQxBQJEMgUCRDIFAkQzBQJEMwUCRjEFAkYyBQJGMwUCRjStGVRunUwdekbVYdAVgrs8LC3YtwjrkxTc7LIeQUNIXQ==',
+             '__EVENTVALIDATION': '/wEdABHEPqXkeQtUOWLSv6FkwRhzrVyLxNzBgt1KJuQZ6iZJZHvbOVd7jD77vUTJ9vAbDccHENsdLPywzIncI1Bqene+lBw9tIsm88xZb2QeaC7+SxHn/Prl20L4a14KDWdLx/gcCH+tyiInr+uI0qrtile//yEQBL0aeQ0Xwgupe0bzNu6Y/VkGfFQLatZapz3Bx/aq0T24n4iNXw+FJx9jUxf/WEcduLz4I5EZp/siXfMCgNsHIFw5Q9Z526KmqnVjceuhXfVMuvQwwi4LAJ9Q4hxpTprLTaA28j22ztuekqEzEUmzhk4fH7XS71+9QhewoZ1wHZa9rSvdos3LZrPavMF2zfg78Z8BXhXifTCAVkevd53e7xy2nb59y0IZaUjHCYSgIpsPtmG7wQHn03ODG6Bd',
              'ssq': '陕西省西安市长安区',
              '1': 'A1',
              '2': 'B2',
